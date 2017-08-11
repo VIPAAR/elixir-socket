@@ -88,7 +88,7 @@ defmodule Socket.Web do
     protocols:  [String.t],
     extensions: [String.t],
     key:        String.t,
-    mask:       boolean }
+    mask:       nil | true | integer }
 
   @spec headers(%{String.t => String.t}, Socket.t, Keyword.t) :: %{String.t => String.t}
   defp headers(acc, socket, options) do
